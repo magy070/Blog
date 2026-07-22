@@ -1,25 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="magy070 — a developer blog about code, tools, and craft.">
+  <meta name="theme-color" content="#111111">
   <title>magy070</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" id="hljs-light">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" id="hljs-dark" disabled>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" id="hljs-light" disabled>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" id="hljs-dark">
 </head>
 <body>
-  <header>
-    <a href="/" class="site-title">magy070</a>
-    <button id="theme-toggle" aria-label="Toggle dark mode">
-      <span class="icon-sun">&#9788;</span>
-      <span class="icon-moon">&#9790;</span>
-    </button>
-  </header>
-  <div class="layout">
-    <main id="content"></main>
-    <aside id="toc" class="toc"></aside>
+  <div id="reading-progress" class="reading-progress" aria-hidden="true"></div>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="magy070 home">magy070</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/" data-nav>Home</a></li>
+      <li><a href="/#featured" data-nav>Blog</a></li>
+      <li><a href="/#about" data-nav>About</a></li>
+      <li><a href="/#categories" data-nav>Categories</a></li>
+      <li><a href="/#newsletter" data-nav>Newsletter</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="icon-sun" aria-hidden="true">&#9788;</span>
+        <span class="icon-moon" aria-hidden="true">&#9790;</span>
+      </button>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Navigation menu">
+    <ul class="mobile-menu-links">
+      <li><a href="/" data-mobile-nav>Home</a></li>
+      <li><a href="/#featured" data-mobile-nav>Blog</a></li>
+      <li><a href="/#about" data-mobile-nav>About</a></li>
+      <li><a href="/#categories" data-mobile-nav>Categories</a></li>
+      <li><a href="/#newsletter" data-mobile-nav>Newsletter</a></li>
+    </ul>
   </div>
+
+  <main id="main-content">
+    <div id="content"></div>
+    <aside id="toc" class="toc"></aside>
+  </main>
+
+  <div id="home-sections"></div>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <span aria-hidden="true">&#9650;</span>
+  </button>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">magy070</span>
+        <p class="footer-tagline">Building things on the web.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h3 class="footer-heading">Navigate</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#featured">Blog</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#categories">Categories</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Connect</h3>
+          <ul>
+            <li><a href="https://github.com/magy070" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="mailto:magy070@proton.me">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 magy070. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.1/marked.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   <script src="script.js"></script>
