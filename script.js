@@ -513,7 +513,7 @@
   }
 
   function renderLatest(sorted) {
-    var latest = sorted.slice(0, 4);
+    var latest = sorted;
     var cards = latest.map(function (post, i) {
       return renderBlogCard(post, i, false);
     }).join("");
